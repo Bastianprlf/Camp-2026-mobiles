@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Camp 2026 Mobile</title>
+<link rel="stylesheet" href="mobile-style.css">
+</head>
+<body>
+
+<h1>Choses à apprendre Camp 2026</h1>
+
+<div class="tabs">
+<button class="tab active" onclick="showTab('morse',this)">Morse</button>
+<button class="tab" onclick="showTab('chansons',this)">Chansons</button>
+</div>
+
+<div id="morse" class="panel show">
+<p>Règle : syllabe avec o = -, autres syllabes = .</p>
+
+<h2>Bonnes réponses</h2>
+<div id="answers"></div>
+
+<h2>Écrire le Morse</h2>
+<div id="inputs"></div>
+
+<p id="progressText">Progression 0/26</p>
+<div class="bar"><div id="fill" class="fill"></div></div>
+
+<p><button onclick="resetAll()">Recommencer</button></p>
+</div>
+
+<div id="chansons" class="panel">
+<h2>Chansons</h2>
+
+<div class="song">
+<h3>Rassemblement</h3>
+<textarea class="songedit"></textarea>
+</div>
+
+<div class="song">
+<h3>Lever des couleurs</h3>
+<textarea class="songedit"></textarea>
+</div>
+
+<div class="song">
+<h3>Brabançonne</h3>
+<textarea class="songedit"></textarea>
+</div>
+
+<div class="song">
+<h3>Cantique</h3>
+<textarea class="songedit"></textarea>
+</div>
+
+</div>
+
+<script src="mobile-script.js"></script>
+
+</body>
+</html>
