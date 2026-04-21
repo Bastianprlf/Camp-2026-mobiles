@@ -43,7 +43,6 @@ let answers=Array(26).fill('');
 let state=Array(26).fill('pending');
 
 function showTab(id,btn){
-
 document.querySelectorAll('.panel')
 .forEach(p=>p.classList.remove('show'));
 
@@ -111,13 +110,16 @@ a +=
 content+
 '</div>';
 
+
+if(state[i]==='pending'){
+
 let disabled=
-(i!==currentIndex()||
-state[i]!=='pending')
+(i!==currentIndex())
 ?'disabled':'';
 
 b +=
 '<div class="row">'+
+
 '<input class="input" '+disabled+
 ' value="'+answers[i]+'" '+
 'oninput="typeMorse('+i+',this.value)">'+
@@ -131,6 +133,27 @@ mn[L]+
 'Valider</button>'+
 
 '</div>';
+
+}
+
+else{
+
+let colorClass=
+state[i]==='good'
+? 'answer green'
+: 'answer red';
+
+b +=
+'<div class="row">'+
+
+'<div class="'+colorClass+'">'+
+L+'/'+morse[L]+
+'</div>'+
+
+'</div>';
+
+}
+
 }
 
 document.getElementById(
@@ -159,10 +182,7 @@ document
 .addEventListener(
 'click',
 function(){
-showTab(
-'morse',
-this
-);
+showTab('morse',this);
 }
 );
 
@@ -171,10 +191,7 @@ document
 .addEventListener(
 'click',
 function(){
-showTab(
-'chansons',
-this
-);
+showTab('chansons',this);
 }
 );
 
