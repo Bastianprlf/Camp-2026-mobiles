@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Camp 2026 Mobile</title>
+<title>Camp 2026</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
 </div>
 
 <div id="morse" class="panel show">
+
 <p>Règle : syllabe avec o = -, autres syllabes = .</p>
 
 <h2>Bonnes réponses</h2>
@@ -25,12 +26,19 @@
 <div id="inputs"></div>
 
 <p id="progressText">Progression 0/26</p>
-<div class="bar"><div id="fill" class="fill"></div></div>
 
-<p><button onclick="resetAll()">Recommencer</button></p>
+<div class="bar">
+<div id="fill" class="fill"></div>
+</div>
+
+<p>
+<button onclick="resetAll()">Recommencer</button>
+</p>
+
 </div>
 
 <div id="chansons" class="panel">
+
 <h2>Chansons</h2>
 
 <div class="song">
