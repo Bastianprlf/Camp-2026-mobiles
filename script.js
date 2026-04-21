@@ -100,3 +100,16 @@ document.getElementById('fill').style.width=
 }
 
 render();
+document.getElementById('tab-morse').addEventListener(
+'click',
+function(){
+showTab('morse', this);
+}
+);
+
+document.getElementById('tab-chansons').addEventListener(
+'click',
+function(){
+showTab('chansons', this);
+}
+);
